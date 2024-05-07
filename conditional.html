@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body">
+
+    <div id="app">
+        <!-- <h1 v-if="nilai>8">
+            Selamat, Kamu Lulus dengan Predikat "A"
+        </h1>
+        <h1 v-else-if="nilai <= 8 && nilai > 7.4">
+            Selamat, Kamu Lulus dengan Predikat "B"
+        </h1>
+        <h1 v-else>
+            Yahh, Kamu Belum Lulus :(
+        </h1> -->
+
+        <h1 v-show="stateSaklar" style="background-color: aqua;">
+            Horeee, Lampu hiuupp!!
+        </h1>
+        <button @click="saklar">Pencet Saklar</button>
+    </div>
+
+    <script type="module">
+        import { createApp} from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+    
+        createApp({
+            data() {
+                return {
+                    // nilai: 7.5
+                    stateSaklar: false
+                }
+            },
+            methods: {
+                saklar() {
+                    this.stateSaklar = !this.stateSaklar
+                }
+            }
+            
+        }).mount('#app')
+        </script>
+</body>
+</html>
